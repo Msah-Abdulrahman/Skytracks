@@ -1,0 +1,36 @@
+@import "Application.css";
+
+.button {
+    -fx-background-radius: 50;
+    -fx-font-size: 17;
+}
+
+.button-edit {
+    -fx-background-color: AccentColor, SecondaryColor;
+    -fx-background-insets: 0, 1;
+    -fx-text-fill: AccentColor;
+}
+
+.button-edit:hover {
+    -fx-background-color: AccentColor;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.favorite {
+    -fx-background-color: transparent;
+}
+.favorite .ikonli-font-icon {
+    -fx-icon-code: mdi-heart-outline;
+    -fx-icon-color: #ff3966;
+    -fx-icon-size: 40;
+}
+
+.favorite:selected .ikonli-font-icon {
+    -fx-icon-code: mdi-heart;
+}
+
+.pathShape {
+    -fx-stroke: AccentColor;
+    -fx-border-color: AccentColor;
+}

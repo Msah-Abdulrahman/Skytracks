@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="506.0" styleClass="background" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skytracks.skytracks.controller.SigninController">
+   <children>
+      <HBox layoutX="-4.0" layoutY="-1.0" prefHeight="150.0" prefWidth="514.0">
+         <children>
+            <Label alignment="CENTER" styleClass="title" text="Sign in" textFill="#1c6fc3">
+               <HBox.margin>
+                  <Insets left="190.0" top="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TextField fx:id="txtUsername" layoutX="107.0" layoutY="197.0" prefHeight="26.0" prefWidth="300.0" promptText="    Username" />
+      <PasswordField fx:id="txtPassword" layoutX="107.0" layoutY="247.0" prefHeight="26.0" prefWidth="300.0" promptText="   Password" />
+      <Hyperlink layoutX="100.0" layoutY="292.0" prefHeight="24.0" prefWidth="154.0" styleClass="title" text="forget your password ?" />
+      <Button layoutX="192.0" layoutY="367.0" mnemonicParsing="false" onAction="#login" prefHeight="33.0" prefWidth="134.0" text="Sign in" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button id="sign-up" layoutX="192.0" layoutY="407.0" mnemonicParsing="false" onAction="#SwitchtoSignup" prefHeight="33.0" prefWidth="134.0" text="Sign up" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelMessage" alignment="CENTER" layoutX="113.0" layoutY="141.0" prefHeight="17.0" prefWidth="300.0" textFill="RED">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

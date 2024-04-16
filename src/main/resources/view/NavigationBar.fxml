@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox id="NavigationBar" fx:id="navigationBar" alignment="CENTER" minWidth="-Infinity" prefHeight="768.0" prefWidth="73.0" spacing="15.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skytracks.skytracks.controller.NavigationBarController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <ImageView fx:id="appLogo" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/SkynetLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="15.0" />
+         </VBox.margin>
+      </VBox>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="44.0" textFill="#a174ff">
+         <VBox.margin>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </VBox.margin>
+      </Label>
+      <ToggleButton fx:id="homeBtn" mnemonicParsing="false" onAction="#openHome" prefHeight="50.0" prefWidth="50.0" selected="true" styleClass="navigationButton">
+         <VBox.margin>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </VBox.margin>
+         <graphic>
+            <FontIcon iconLiteral="mdi-home" iconSize="30" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <toggleGroup>
+            <ToggleGroup fx:id="navigationBarGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="searchBtn" mnemonicParsing="false" onAction="#openSearch" prefHeight="50.0" prefWidth="50.0" styleClass="navigationButton" toggleGroup="$navigationBarGroup">
+         <VBox.margin>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </VBox.margin>
+         <graphic>
+            <FontIcon iconLiteral="mdi-magnify" iconSize="20" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <ToggleButton fx:id="accounBtn" mnemonicParsing="false" onAction="#openAccount" prefHeight="50.0" prefWidth="50.0" styleClass="navigationButton" toggleGroup="$navigationBarGroup" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </VBox.margin>
+         <graphic>
+            <FontIcon iconLiteral="mdi-account" iconSize="20" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="0.0" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </VBox.margin>
+      </Label>
+      <ToggleButton fx:id="themeButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#changeTheme" prefHeight="50.0" prefWidth="50.0">
+         <graphic>
+            <FontIcon iconLiteral="mdi-weather-night" iconSize="30" />
+         </graphic>
+      </ToggleButton>
+      <Button id="logoutBtn" mnemonicParsing="false" onAction="#Logout" prefHeight="50.0" prefWidth="50.0">
+         <graphic>
+            <FontIcon iconLiteral="mdi-exit-to-app" iconSize="20" />
+         </graphic>
+         <VBox.margin>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

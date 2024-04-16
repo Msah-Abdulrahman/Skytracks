@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.skytracks.skytracks.controller.MyCardsController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxWidth="-Infinity" spacing="40.0" styleClass="card" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Label text="My Cards">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefWidth="624.0" spacing="20.0">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="previousButton" mnemonicParsing="false" onAction="#previousCard" styleClass="arrow-button">
+                           <graphic>
+                              <FontIcon iconLiteral="mdi-menu-left" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="cardStack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="208.0" prefWidth="364.0">
+                     <children>
+                        <StackPane id="add-credit-card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="208.0" prefWidth="364.0" styleClass="credit-card" />
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="nextButton" ellipsisString="" mnemonicParsing="false" onAction="#nextCard" styleClass="arrow-button">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon iconLiteral="mdi-menu-right" iconSize="50" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefWidth="364.0">
+               <children>
+                  <Label fx:id="lblMessage" textFill="RED">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="364.0" spacing="30.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="500.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="inputCardHolder" promptText="Card Holder" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="underLine-field" />
+                                    <String fx:value="TransparentTextField" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="500.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="inputCardNumber" promptText="Card Number" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="TransparentTextField" />
+                                    <String fx:value="underLine-field" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="500.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="inputExpiryDate" promptText="Expiry Date   MM/YY" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="TransparentTextField" />
+                                    <String fx:value="underLine-field" />
+                                 </styleClass>
+                              </TextField>
+                              <PasswordField fx:id="inputCVV" promptText="CVV" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="TransparentTextField" />
+                                    <String fx:value="underLine-field" />
+                                 </styleClass>
+                              </PasswordField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="364.0" spacing="5.0">
+               <children>
+                  <Button fx:id="actionButton" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="364.0" text="ADD" />
+                  <Button id="delete-credit-card" fx:id="deleteButton" disable="true" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteCard" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <FontIcon iconLiteral="mdi-delete" iconSize="30" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="40.0" top="40.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</VBox>

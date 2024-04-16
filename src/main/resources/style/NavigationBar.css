@@ -1,0 +1,65 @@
+@import "Application.css";
+
+#NavigationBar {
+	-fx-background-color: SecondaryColor;
+}
+
+.navigationButton,
+.navigationButton .ikonli-font-icon {
+    -fx-background-color : Transparent;
+    -fx-background-radius : 100;
+    -fx-pref-width: 50px ;
+    -fx-pref-height: 50px ;
+    -fx-icon-size: 30px ;
+    -fx-icon-color: gray;
+}
+
+.navigationButton:hover,
+.navigationButton:hover .ikonli-font-icon {
+    -fx-background-color : AlphaAccentColor ;
+    -fx-pref-width: 55px ;
+    -fx-pref-height: 55px ;
+    -fx-icon-size: 35px ;
+    -fx-icon-color: AccentColor;
+}
+
+.navigationButton:selected,
+.navigationButton:hover:selected,
+.navigationButton:selected .ikonli-font-icon {
+    -fx-background-color : AccentColor;
+    -fx-icon-color: #ffffff;
+    
+    /* Add Glow Effect to The Selected Item */
+    -fx-effect: glow;
+}
+
+#logoutBtn,
+#logoutBtn .ikonli-font-icon {
+    -fx-background-color : Transparent;
+    -fx-background-radius : 100;
+    -fx-pref-width: 50px ;
+    -fx-pref-height: 50px ;
+    -fx-icon-size: 30px ;
+    -fx-icon-color: gray;
+}
+#logoutBtn:hover,
+#logoutBtn:hover .ikonli-font-icon {
+    -fx-icon-color: AccentColor;
+    -fx-effect: null;
+}
+
+#themeButton,
+#themeButton .ikonli-font-icon {
+    -fx-background-color: transparent;
+    -fx-icon-code: mdi-weather-night;
+    -fx-icon-color: grey;
+}
+#themeButton:hover .ikonli-font-icon {
+    -fx-icon-color: #7c38e5
+}
+#themeButton:selected .ikonli-font-icon {
+    -fx-icon-code: mdi-white-balance-sunny;
+}
+#themeButton:selected:hover .ikonli-font-icon {
+    -fx-icon-color: #ffea00
+}

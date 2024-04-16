@@ -1,0 +1,25 @@
+.text-input,
+.label > .text {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+.date-picker .text {
+    -fx-fill: white;
+}
+.date-picker-popup .text {
+    -fx-fill: white;
+}
+
+.table-row-cell {
+    -fx-text-background-color: #ffffff;
+}
+
+.searchable-combo-box .text {
+    -fx-fill: white;
+}
+
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button {
+    -fx-text-fill: white;
+}

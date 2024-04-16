@@ -1,0 +1,132 @@
+@import "Application.css";
+
+.bookingWindow,
+#confirmationWindow {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+#confirmationWindow {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 2.5, -7);
+}
+
+.bookingWindow > .scroll-bar:vertical .thumb {
+    -fx-background-color: transparent;
+}
+.bookingWindow> .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: transparent;
+}
+#airPlane-head {
+    -fx-border-radius: 100% 100% 0 0;
+    -fx-background-radius: 100% 100% 0 0;
+    -fx-background-color: SecondaryColor;
+    -fx-border-color: darkgrey;
+    -fx-border-width: 0.5;
+    -fx-background-insets: 1;
+    -fx-padding: 300 30 30 30;
+}
+#airPlane-body {
+    -fx-background-radius: 500 500 0 0;
+    -fx-background-color: SecondaryColor;
+    -fx-background-insets: 1;
+    -fx-padding: 0 30 30 30;
+}
+
+
+#airPlane-body > * {
+    -fx-background-radius: 500 500 0 0;
+    -fx-background-color: DerivedColor;
+}
+
+#seatMap .seat {
+    -fx-background-radius: 30% 30% 0 0;
+    -fx-border-radius: 30% 30% 0 0;
+    -fx-background-color: transparent;
+    -fx-border-width: 3;
+    -fx-effect: null;
+}
+
+#seatMap .seat:hover,
+#seatMap .seat:selected {
+    -fx-background-color: AccentColor;
+    -fx-border-color: AccentColor;
+}
+
+#seatMap .text {
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+#confirm,
+#confirm .text {
+    -fx-background-color: AccentColor;
+    -fx-background-radius: 5;
+    -fx-font-size: 15;
+}
+
+#cancel,
+#cancel .text {
+    -fx-background-color: #efefef;
+    -fx-background-radius: 5;
+    -fx-text-fill: gray;
+    -fx-font-size: 15;
+    -fx-effect: null;
+}
+
+.SeatIcon,
+#seatMap .SeatIcon {
+    -fx-background-radius: 30% 30% 0 0;
+    -fx-border-radius: 30% 30% 0 0;
+    -fx-border-width: 3;
+}
+
+.FirstSeatIcon,
+#seatMap .FirstSeatIcon  {
+    -fx-border-color: #ffb01e;
+}
+
+.BusinessSeatIcon,
+#seatMap .BusinessSeatIcon  {
+    -fx-border-color: #4fc10c;
+}
+
+.EconomySeatIcon,
+#seatMap .EconomySeatIcon  {
+    -fx-border-color: darkgray;
+}
+
+.SelectedSeatIcon,
+#seatMap .SelectedSeatIcon {
+    -fx-background-color: AccentColor;
+}
+
+.UnavailableSeatIcon,
+#seatMap .UnavailableSeatIcon,
+#seatMap .UnavailableSeatIcon:disabled {
+    -fx-background-color: #ff3434;
+    -fx-border-color: #ff3434;
+    -fx-opacity: 1.0;
+}
+
+.cancel,
+.favorite {
+    -fx-background-color: transparent;
+}
+.favorite .ikonli-font-icon {
+    -fx-icon-code: mdi-heart-outline;
+    -fx-icon-color: #ff3966;
+    -fx-icon-size: 40;
+}
+
+.favorite:selected .ikonli-font-icon {
+    -fx-icon-code: mdi-heart;
+}
+
+.cancel:hover {
+    -fx-effect: null;
+}
+.cancel .ikonli-font-icon {
+    -fx-icon-code: mdi-delete;
+    -fx-icon-color: #ff1f1f;
+    -fx-icon-size: 40;
+}

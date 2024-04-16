@@ -1,0 +1,129 @@
+@import "Application.css";
+
+.card {
+    -fx-effect: null;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+
+.date-picker {
+    -fx-border-width: 2;
+    -fx-border-color: AccentColor;
+    -fx-border-radius: 50%;
+}
+
+.spinner,
+.spinner > * {
+    -fx-pref-width: 35;
+}
+
+.time-picker .label {
+    -fx-text-fill: AccentColor;
+}
+
+.SeatIcon,
+#seatMap .SeatIcon {
+    -fx-background-radius: 30% 30% 0 0;
+    -fx-border-radius: 30% 30% 0 0;
+    -fx-border-width: 3;
+}
+
+.FirstSeatIcon,
+#seatMap .FirstSeatIcon  {
+    -fx-border-color: #ffb01e;
+}
+
+.BusinessSeatIcon,
+#seatMap .BusinessSeatIcon  {
+    -fx-border-color: #4fc10c;
+}
+
+.EconomySeatIcon,
+#seatMap .EconomySeatIcon  {
+    -fx-border-color: darkgray;
+}
+
+.underLine-field {
+    -fx-background-color:  transparent;
+    -fx-border-color: AccentColor;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0;
+}
+
+.separator:horizontal {
+    -fx-padding: 0;
+}
+
+#avatar .button {
+    -fx-opacity: 0;
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 0;
+}
+
+#avatar .button:hover {
+    -fx-opacity: 1;
+    -fx-effect: null;
+}
+
+#close-button {
+    -fx-background-color: transparent;
+    -fx-effect: null;
+}
+
+#close-button .ikonli-font-icon {
+    -fx-icon-color: darkgrey;
+}
+
+#close-button:hover .ikonli-font-icon {
+    -fx-icon-color: red;
+}
+
+.action-button:hover {
+    -fx-effect: null;
+}
+#delete-button {
+    -fx-background-color: red;
+}
+#edit-button {
+    -fx-background-color: orange;
+}
+#add-button {
+    -fx-background-color: #069cff;
+}
+
+.search-bar {
+    -fx-border-radius: 50%;
+    -fx-border-width: 1.5;
+    -fx-border-color: AccentColor;
+    -fx-background-color: transparent;
+}
+
+#logoutBtn,
+#themeButton {
+    -fx-background-color: SecondaryColor;
+    -fx-background-radius: 50%;
+}
+
+#themeButton .ikonli-font-icon {
+    -fx-icon-code: mdi-weather-night;
+    -fx-icon-color: grey;
+}
+#themeButton:hover .ikonli-font-icon {
+    -fx-icon-color: #7c38e5
+}
+#themeButton:selected .ikonli-font-icon {
+    -fx-icon-code: mdi-white-balance-sunny;
+}
+#themeButton:selected:hover .ikonli-font-icon {
+    -fx-icon-color: #ffea00
+}
+
+#logoutBtn .ikonli-font-icon {
+    -fx-icon-size: 30px ;
+    -fx-icon-color: grey;
+}
+#logoutBtn:hover,
+#logoutBtn:hover .ikonli-font-icon {
+    -fx-icon-color: tomato;
+    -fx-effect: null;
+}

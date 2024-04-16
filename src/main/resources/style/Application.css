@@ -1,0 +1,484 @@
+.root {
+    PrimaryColor: #eef1fa ;
+    SecondaryColor: white ;
+    AccentColor: rgb(63, 152, 252);
+    AlphaAccentColor: rgba(63, 152, 252, 0.4);
+    DerivedColor: derive(SecondaryColor, -5%);
+    glow: dropshadow(gaussian, AlphaAccentColor, 10, 0.3, 0, 0);
+	-fx-background-color: PrimaryColor;
+}
+
+/*
+==========================================================================================
+=                           Customize UI Elements                                        =
+==========================================================================================
+ */
+
+/*========================================== Button Styling =============================================*/
+.button,
+.button .ikonli-font-icon {
+    -fx-background-color: AccentColor;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-icon-color: white;
+}
+.button:hover {
+    -fx-effect: glow;
+}
+
+.button,
+.toggle-button,
+.arrow-button {
+    -fx-cursor: hand;
+}
+/*========================================== Separator Styling ==========================================*/
+.separator:vertical,
+.separator:horizontal {
+    -fx-border-color: transparent;
+    -fx-padding: 4;
+}
+.separator:vertical .line,
+.separator:horizontal .line {
+    -fx-border-color: AccentColor;
+    -fx-border-radius: 50%;
+    -fx-border-width: 1;
+}
+/*========================================== Scroll-pane and Scroll-bar Styling ==========================================*/
+.scroll-pane {
+    -fx-background-color: PrimaryColor;
+    -fx-background: PrimaryColor;
+}
+
+.scroll-bar {
+    -fx-background-color: Transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: -2 2;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: AlphaAccentColor;
+}
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: AccentColor;
+}
+/*======================================== Date-Picker-Popup ====================================================*/
+.date-picker,
+.date-picker > .text-field,
+.date-picker > .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.date-picker > .arrow-button .arrow {
+    -fx-background-color: AccentColor;
+}
+
+
+.date-picker-popup {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: PrimaryColor;
+    -fx-border-color: darkgrey;
+    -fx-border-width: 0.5;
+    -fx-effect: null;
+}
+
+.date-picker-popup > .month-year-pane,
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup > * > .spinner > .label {
+    -fx-min-width: 60;
+}
+
+.date-picker-popup > * > .spinner > .button:selected,
+.date-picker-popup > * > .spinner > .button:hover,
+.date-picker-popup > * > .spinner > .button:focused,
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-radius: 50%;
+    -fx-min-width: 20;
+    -fx-min-height: 20;
+    -fx-max-width: 20;
+    -fx-max-height: 20;
+    -fx-background-color: AccentColor;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 0);
+}
+
+.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow {
+    -fx-background-color: white;
+    -fx-border-width: 1;
+    -fx-border-color: white;
+}
+
+.date-picker-popup > * > .date-cell {
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 50%;
+    -fx-font-size: 12;
+    -fx-min-height: 40;
+    -fx-min-width: 40;
+    -fx-max-height: 40;
+    -fx-max-width: 40;
+}
+
+.date-picker-popup > * > .today .text {
+    -fx-fill: AccentColor;
+}
+
+.date-picker-popup > * > .day-cell:hover,
+.date-picker-popup > * > .day-cell:hover .text,
+.date-picker-popup > * > .today.selected .text,
+.date-picker-popup > * > .previous-month.selected .text,
+.date-picker-popup > * > .next-month.selected .text,
+.date-picker-popup > * > .previous-month.selected,
+.date-picker-popup > * > .next-month.selected,
+.date-picker-popup > * > .selected {
+    -fx-background-color: AccentColor;
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.date-picker-popup > * > .previous-month .text,
+.date-picker-popup > * > .next-month .text {
+    -fx-fill: grey;
+}
+
+.date-picker-popup > * > .previous-month.today .text,
+.date-picker-popup > * > .next-month.today .text {
+    -fx-fill: AccentColor;
+}
+/*======================================== text & font styling ====================================================*/
+.text-input {
+    -fx-font-size: 13;
+}
+
+.text-input:focused {
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+}
+.ikonli-font-icon {
+    -fx-icon-color: AccentColor;
+}
+/*======================================== SearchableComboBox ====================================================*/
+.searchable-combo-box .list-view {
+    -fx-background-color: PrimaryColor;
+    -fx-border-color: darkgrey;
+    -fx-border-width: 0.5;
+    -fx-effect: null;
+}
+
+.searchable-combo-box .list-view .list-cell {
+    -fx-background-color: transparent;
+}
+
+.searchable-combo-box .list-view .list-cell:hover,
+.searchable-combo-box .list-view .list-cell:hover .text {
+    -fx-background-color: AlphaAccentColor;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.searchable-combo-box .list-view .list-cell:selected,
+.searchable-combo-box .list-view .list-cell:selected .text {
+    -fx-background-color: AccentColor;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.searchable-combo-box {
+    -fx-prompt-text-fill: grey;
+    -fx-border-width: 1;
+    -fx-border-color: AccentColor;
+}
+
+.searchable-combo-box .arrow {
+    -fx-background-color: AccentColor;
+}
+
+.searchable-combo-box,
+.searchable-combo-box > * {
+    -fx-background-color: transparent;
+    -fx-border-radius: 50%;
+}
+
+.searchable-combo-box .image-view {
+    visibility:false;
+}
+/*======================================== Choice-Box ====================================================*/
+.choice-box {
+   -fx-background-color: transparent;
+}
+
+.choice-box .arrow {
+    -fx-background-color: AccentColor;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: PrimaryColor;
+    -fx-border-color: darkgrey;
+    -fx-border-width: 0.5;
+    -fx-effect: null;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: AccentColor;
+}
+
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: white;
+}
+
+.choice-box .menu-item:hover {
+    -fx-background-color: AlphaAccentColor;
+}
+/*======================================== Spinner ====================================================*/
+.spinner,
+.spinner > * {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.spinner > .increment-arrow-button,
+.spinner > .decrement-arrow-button {
+    -fx-padding: 1;
+    -fx-cursor: hand;
+}
+
+.spinner > * > .increment-arrow,
+.spinner > * > .decrement-arrow {
+    -fx-background-color: AccentColor;
+}
+.spinner .text-field {
+    -fx-alignment: center;
+}
+/*======================================== Table-view ====================================================*/
+.main-header .text {
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.sub-header .text {
+    -fx-font-weight: normal;
+    -fx-cursor: hand;
+}
+
+.table-view,
+.table-view .column-header,
+.table-view .corner,
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1.5 0;
+    -fx-border-color: AccentColor;
+    -fx-padding: 0 0 5 0;
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell:odd{
+    -fx-background-color: PrimaryColor;
+    -fx-text-alignment: center;
+}
+.table-row-cell:even{
+    -fx-background-color: SecondaryColor;
+}
+.table-row-cell:hover {
+    -fx-background-color: AlphaAccentColor;
+    -fx-text-background-color: white;
+}
+.table-row-cell:selected {
+    -fx-background-color: AccentCoLor;
+    -fx-text-background-color: white;
+}
+/*======================================== Dialog-Pane ====================================================*/
+.dialog-pane {
+    -fx-background-color: SecondaryColor;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: lightgray;
+    -fx-border-width: 0.5;
+}
+
+.dialog-pane > .button-bar {
+    -fx-border-color: darkgrey;
+    -fx-border-width: 0.5 0 0 0;
+}
+
+.dialog-pane > .button-bar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: AccentColor;
+    -fx-border-color: AccentColor;
+    -fx-border-width: 1;
+    -fx-font-weight: bolder;
+    -fx-font-family: "Arial Black";
+    -fx-effect: null;
+}
+
+.dialog-pane > .button-bar .button:default {
+    -fx-background-color: AccentColor;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .header-panel,
+.dialog-pane .header-panel .text{
+    -fx-background-color: transparent;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20px;
+    -fx-fill: AccentColor;
+    -fx-alignment: bottom-left;
+    -fx-pref-height: 40px;
+    -fx-padding: 0 0 0 10;
+}
+
+.dialog-pane > .content {
+    -fx-padding: 0.833em; /* 10 */
+    -fx-alignment: center-left;
+}
+
+.dialog-pane > .content.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold ;
+    -fx-font-family: Calibri;
+}
+
+.alert.information.dialog-pane,
+.alert.confirmation.dialog-pane {
+    -fx-graphic: null;
+}
+/*======================================== Pagination ====================================================*/
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 10;
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 0.5;
+    -fx-background-color: lightgray, SecondaryColor;
+    -fx-background-radius: 50%;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}
+
+.pagination > .pagination-control > .control-box > .left-arrow-button .left-arrow,
+.pagination > .pagination-control > .control-box > .right-arrow-button .right-arrow {
+    -fx-background-color: AccentColor;
+}
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: AlphaAccentColor;
+    -fx-effect: null;
+}
+
+.pagination > .pagination-control > .page-information {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: AccentColor;
+    -fx-text-fill: white;
+    -fx-effect: glow;
+}
+
+.pagination > .page {
+    -fx-background-color: SecondaryColor;
+    -fx-background-radius: 20;
+    -fx-background-insets: 0 0 20 0;
+    -fx-border-color: lightgray;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 20;
+    -fx-border-insets: 0 0 20 0;
+    -fx-padding: 10 10 10 10;
+}
+/*=========================================================================================================*/
+
+.TransparentTextField,
+.TransparentTextField > *,
+.TransparentTextField > * > .text-field,
+.TransparentTextField > * > .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.card {
+    -fx-background-color: SecondaryColor;
+    -fx-border-color: lightgray;
+    -fx-border-width: 0.5;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+
+.underLine-field {
+    -fx-border-color: AccentColor;
+    -fx-border-width: 0 0 2 0;
+}
+
+.credit-card,
+.credit-card-overlay,
+.credit-card .ikonli-font-icon {
+    first-color: rgba(20, 136, 204, 1);
+    second-color: #2B32B2;
+    gradient-color: linear-gradient(to right bottom, first-color, second-color);
+    -fx-background-color: gradient-color;
+    -fx-background-radius: 20;
+    -fx-border-color: DarkGray;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 20;
+    -fx-cursor: default;
+    -fx-icon-color: white;
+}
+
+.credit-card-text {
+    -fx-text-fill: white;
+}
+
+.credit-card-overlay {
+    -fx-background-color: rgba(255,255,255,0.2);
+}
+
+.credit-card:selected .credit-card-overlay {
+    -fx-background-color: transparent;
+}
+
+.credit-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(20, 136, 204, 0.25), 10, 0.3, 0, 0);
+}
+
+#overlay-layer {
+    -fx-background-color: black;
+    -fx-opacity: 0.6;
+}
+
+#overlay-layer:disabled {
+    -fx-opacity: 0;
+}

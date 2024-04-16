@@ -1,0 +1,61 @@
+@import "Application.css";
+
+.paymentWindow {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+}
+
+.paymentWindow > .scroll-bar:vertical .thumb {
+    -fx-background-color: transparent;
+}
+.paymentWindow > .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: transparent;
+}
+
+.credit-card {
+    -fx-cursor: hand;
+}
+
+#Summary {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+#confirmButton,
+#confirmButton .text {
+    -fx-background-color: AccentColor;
+    -fx-background-radius: 5;
+    -fx-font-size: 15;
+}
+
+.spinner,
+.spinner > * {
+    -fx-pref-width: 55;
+}
+
+#add-credit-card {
+    -fx-background-radius: 20;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 20;
+    -fx-background-color: PrimaryColor;
+    -fx-cursor: default;
+    -fx-effect: null;
+}
+
+#add-credit-card .button,
+#add-credit-card .ikonli-font-icon {
+    -fx-background-color: SecondaryColor;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
+    -fx-icon-size: 30;
+    -fx-icon-color: AccentColor;
+}
+
+#add-credit-card .button:hover,
+#add-credit-card .button:hover .ikonli-font-icon {
+    -fx-background-color: AccentColor;
+    -fx-icon-color: white;
+    -fx-background-radius: 50%;
+}
